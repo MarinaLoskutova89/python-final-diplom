@@ -1,5 +1,6 @@
 ### Python ###
 .idea/
+orders_old/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -117,3 +118,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+secrets.json
