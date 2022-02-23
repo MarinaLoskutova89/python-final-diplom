@@ -1,13 +1,13 @@
 from rest_framework import serializers
 
-from orders.backend.models import Shop, Category, Contact, User, Product, ProductParameter, ProductInfo, OrderItem, \
+from .models import Shop, Category, Contact, User, Product, ProductParameter, ProductInfo, OrderItem, \
     Order
 
 
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
-        fields = ('id', 'type', 'user', 'value',)
+        fields = ('id', 'city', 'street', 'house', 'structure', 'building', 'apartment', 'user', 'phone')
         read_only_fields = ('id',)
         extra_kwargs = {
             'user': {'write_only': True}
@@ -33,7 +33,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class ShopSerializer(serializers.ModelSerializer):
     class Meta:
         model = Shop
-        fields = ('id', 'name',)
+        fields = ('id', 'name', 'state',)
         read_only_fields = ('id',)
 
 
